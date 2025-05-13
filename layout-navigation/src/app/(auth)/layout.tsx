@@ -1,4 +1,14 @@
-import React from 'react'
+import { Metadata } from 'next';
+import React from 'react';
+
+export const metadata: Metadata = {
+  title: {
+    default: "Bike share",
+    template: "%s | Bike share app ",
+    absolute: "",
+  },
+  description: '...',
+}
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -13,5 +23,4 @@ const layout = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export default layout
-
+export default layout;
