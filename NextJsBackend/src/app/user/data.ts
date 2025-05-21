@@ -88,5 +88,14 @@ export const user = [
     "address": "Gazipur, Bangladesh",
     "education": "BSc in Civil Engineering",
     "hobby": "Cycling"
-  }
+  },
+      {
+        "id": 11,
+        "name": "Alice Rahman",
+        "age": 22,
+        "roll": 1001,
+        "address": "Dhaka, Bangladesh",
+        "education": "BSc in Computer Science",
+        "hobby": "Reading novels"
+    }
 ]

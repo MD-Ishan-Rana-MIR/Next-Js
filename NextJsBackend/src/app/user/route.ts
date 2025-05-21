@@ -1,8 +1,9 @@
+import { type NextRequest } from "next/server";
 import { user } from "./data";
 
-export async function GET() {
-    return Response.json(user)
-}
+// export async function GET() {
+//     return Response.json(user)
+// }
 
 
 // export async function POST(request: Request) {
@@ -34,4 +35,12 @@ export async function POST (request:Request){
         },
         status : 201
     })
+}
+
+export async function GET (request: NextRequest){
+    const searchParams = request.nextUrl.searchParams;
+    const query = searchParams.get("query");
+    const filterData = query ? user.filter(item=>item.name.includes(query)) : user;
+    return Response.json(filterData);
+    console.log(query)
 }
